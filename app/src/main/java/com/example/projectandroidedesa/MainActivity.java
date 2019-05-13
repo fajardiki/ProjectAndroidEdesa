@@ -6,11 +6,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
+import android.widget.Switch;
 
 public class MainActivity extends AppCompatActivity {
 
     private BottomNavigationView mMainNav;
     private FrameLayout mMainFrame;
+
+    private HomeFragment homeFragment;
+    private PengajuanFragment pengajuanFragment;
+    private PengaturanFragment pengaturanFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,23 +25,29 @@ public class MainActivity extends AppCompatActivity {
         mMainFrame = (FrameLayout) findViewById(R.id.main_frame);
         mMainNav = (BottomNavigationView) findViewById(R.id.main_nav);
 
-        mMainNav.setOnNavigationItemReselectedListener(new BottomNavigationView.OnNavigationItemReselectedListener() {
-            @Override
-            public boolean onNavigationItemReselected(@NonNull MenuItem item) {
-                switch (item.getItemId()) {
+        homeFragment = new HomeFragment();
+        pengajuanFragment = new PengajuanFragment();
+        pengaturanFragment = new PengaturanFragment();
 
+        mMainNav.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+                switch (item.getItemId()) {
                     case R.id.nav_home:
+                        mMainNav.setItemBackgroundResource(R.color.colorPrimaryDark);
+                        setFragment(homeFragment);
+                        return true;
+                    case R.id.nav_pengajuan:
                         mMainNav.setItemBackgroundResource(R.color.colorPrimary);
                         return true;
-                    case  R.id.nav_pengajuan:
+                    case R.id.nav_pengaturan:
                         mMainNav.setItemBackgroundResource(R.color.colorAccent);
-                        return true;
-                    case R.id.nav_pengaturan :
-                        mMainNav.setItemBackgroundResource(R.color.colorPrimaryDark);
                         return true;
                         default:
                             return false;
                 }
+                return false;
             }
         });
     }
