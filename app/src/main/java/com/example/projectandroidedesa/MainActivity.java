@@ -1,5 +1,6 @@
 package com.example.projectandroidedesa;
 
+import android.app.Fragment;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
@@ -47,7 +48,10 @@ public class MainActivity extends AppCompatActivity {
                         default:
                             return false;
                 }
-                return false;
+            }
+
+            private void setFragment(Fragment fragment) {
+                
             }
         });
     }
