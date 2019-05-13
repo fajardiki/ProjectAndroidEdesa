@@ -16,7 +16,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".Pengajuan" android:label="Pengajuan"></activity>
-        <activity android:name=".MainActivity"></activity>
     </application>
 
 </manifest>
