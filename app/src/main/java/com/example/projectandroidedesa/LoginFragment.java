@@ -26,7 +26,7 @@ public class LoginFragment extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.fragment_login);
 
         dataHelper = new DataHelper(this);
         username = (EditText) findViewById(R.id.username);
@@ -55,9 +55,9 @@ public class LoginFragment extends AppCompatActivity {
                         Toast.makeText(getApplicationContext(), "Successfully Logged in",
                                 Toast.LENGTH_LONG).show();
 
-                        Intent intent=new Intent(LoginActivity.this,MapsActivity.class);
-                        startActivity(intent);
-                        finish();
+//                        Intent intent=new Intent(LoginFragment.this,MapsActivity.class);
+//                        startActivity(intent);
+//                        finish();
                     }else{
                         Toast.makeText(getApplicationContext(), "Failed to log in , please try again",
                                 Toast.LENGTH_LONG).show();
@@ -69,17 +69,17 @@ public class LoginFragment extends AppCompatActivity {
         txtRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
-                startActivity(intent);
+//                Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+//                startActivity(intent);
             }
         });
 
         pref = getSharedPreferences("SharedPref", Context.MODE_PRIVATE);
         String session_id =  pref.getString("session",null);
         if(session_id!=null){
-            Intent intent=new Intent(LoginActivity.this,MapsActivity.class);
-            startActivity(intent);
-            finish();
+//            Intent intent=new Intent(LoginActivity.this,MapsActivity.class);
+//            startActivity(intent);
+//            finish();
         }
     }
 
