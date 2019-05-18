@@ -41,4 +41,31 @@
 
     </RelativeLayout>
 
+    <RelativeLayout
+        android:id="@+id/layout_botom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_top">
+
+        <TextView
+            android:id="@+id/txtpengumuman"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pengumuman"
+            android:textStyle="bold"
+            android:textSize="25dp"
+            android:fontFamily="times new roman"
+            android:textAlignment="center"
+            android:padding="10dp"/>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/txtpengumuman">
+            <ListView
+                android:id="@+id/listpengumuman"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></ListView>
+        </FrameLayout>
+    </RelativeLayout>
+
 </RelativeLayout>
