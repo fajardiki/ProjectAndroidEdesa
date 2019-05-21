@@ -6,66 +6,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFF"
-    tools:context=".HomeFragment">
+    tools:context=".HomeFragment"
+    android:padding="16dp">
 
-    <RelativeLayout
-        android:id="@+id/layout_top"
+    <ListView
+        android:id="@+id/listView"
         android:layout_width="match_parent"
-        android:layout_height="200dp">
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <com.example.projectandroidedesa._sliders.SliderView
-                android:id="@+id/sliderView"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
-
-        </FrameLayout>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/bg_indicator"/>
-
-        <LinearLayout
-            android:id="@+id/pagesContainer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_gravity="bottom"
-            android:layout_marginBottom="8dp"
-            android:gravity="center_horizontal"
-            android:orientation="horizontal"/>
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/layout_botom"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/layout_top">
-
-        <TextView
-            android:id="@+id/txtpengumuman"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Pengumuman"
-            android:textStyle="bold"
-            android:textSize="25dp"
-            android:fontFamily="times new roman"
-            android:textAlignment="center"
-            android:padding="10dp"/>
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@+id/txtpengumuman">
-            <ListView
-                android:id="@+id/listpengumuman"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"></ListView>
-        </FrameLayout>
-    </RelativeLayout>
+        android:layout_height="wrap_content"/>
 
 </RelativeLayout>

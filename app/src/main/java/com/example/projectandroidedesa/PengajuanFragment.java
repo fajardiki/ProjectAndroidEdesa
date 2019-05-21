@@ -13,7 +13,6 @@ import android.widget.ListView;
  * A simple {@link Fragment} subclass.
  */
 public class PengajuanFragment extends Fragment {
-    ListView lv;
 
     public PengajuanFragment() {
         // Required empty public constructor
